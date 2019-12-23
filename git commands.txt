@@ -1,0 +1,40 @@
+git config --global user.name "Shahdab" ======================> (set user name globaly)
+git config --global user.email "ShahdabKhatri@gmail.com" =====> (set user email globaly)
+git config --list ============================================> (checking is it set or not)
+git help add || git add --help ===============================> (any help for command)
+git init  ====================================================> (initialize repository)
+git status ===================================================> (check status)
+git add -A  ==================================================> (all all files to staging area)
+git reset  ===================================================> (remove all file to staging area)
+git add .gitignore  ==========================================> (add .gitigonre file to staging area)
+git reset .gitignore =========================================> (remove .gitignore file ot staging area)
+git commit -m "Here's come the message"	======================> (commit with message)
+git log	======================================================> (see the commitments)
+git clone <url> <where to clone> =============================> (clone the repo)
+
+#########################################################################################################
+
+____some basic linux commands ____
+=========================================================================================================
+ls				(list of files)
+ls -al 				(list of all files + hidden files)
+touch .gitignore		(create .gitignore file)
+rm -rf .git 			(remove forcefully .git file) 
+git clone ../directory.git . 	(clone repo from one step back )
+
+##########################################################################################################
+
+git remote -v	=====================> (show the link of remote repoistory if it is connected)
+git branch -a 	=====================> (show all branches of local and remote both)
+git diff      =======================> (show the difference of modifications)
+git pull origin master ==============> (clone the same repo as you are current working on and different users are involved)
+git push origin master ==============> (push the changes to the remote repo)
+git branch new_branch  ==============> (make new brach named as new_branch)
+git checkout new_branch =============> (switch to new_branch)
+git push origi -u new_branch ========> (make same branch remotely also apply commit on that brach)
+git merge new_branch ================> (merge new_brach to master brach)
+git branch --merged =================> (show which brach has merged with master)
+git push origin master ==============> (after merging push same as remotely)
+git branch -d new_branch ============> (delete branch locally)
+git push origin --delete new_branch==> (delete branch remotely)
+
