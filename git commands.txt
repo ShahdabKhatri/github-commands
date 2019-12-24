@@ -38,3 +38,17 @@ git push origin master ==============> (after merging push same as remotely)
 git branch -d new_branch ============> (delete branch locally)
 git push origin --delete new_branch==> (delete branch remotely)
 
+git checkout modified.text  =====================> (delete the modification in modified file)
+git commit --amend -m "this is new message" =====> (change the last commit message)
+git commit --amend ENTER (Ctrl + S  ==> :wq) ====> (you can change message and also add file to the part of last commit)
+git log --stat ==================================> (show the summary of logs)
+git cherry-pick < commit # >  ===================> (copy the commit )
+git reset --hard < commit # >  ==================> (reset commits and remove all chages after that)
+git reset --mixed < commit # >  =================> (reset commits and dont remove changes, it is preset in working area)
+git reset --soft < commit # >  ==================> (reset commits and don remove change, it is preset in staging area)
+git reset file.txt OR <commit #> ================> (reset file or commit by default it is mixed reset)
+git reflog  =====================================> (show all log history)
+git revert < commit #> ==========================> (revet that commit as it is not occur but dont delete commits)
+
+
+
