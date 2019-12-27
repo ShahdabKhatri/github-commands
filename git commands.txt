@@ -1,3 +1,4 @@
+
 git config --global user.name "Shahdab" ======================> (set user name globaly)
 git config --global user.email "ShahdabKhatri@gmail.com" =====> (set user email globaly)
 git config --list ============================================> (checking is it set or not)
@@ -11,32 +12,34 @@ git reset .gitignore =========================================> (remove .gitigno
 git commit -m "Here's come the message"	======================> (commit with message)
 git log	======================================================> (see the commitments)
 git clone <url> <where to clone> =============================> (clone the repo)
+git remote add origin "https://github.com/--" ================> (add remote repo)
 
 #########################################################################################################
+_________________________________________________________________________________________________________
+	____some basic linux commands ____
+---------------------------------------------------------------------------------------------------------
 
-____some basic linux commands ____
-=========================================================================================================
-ls				(list of files)
-ls -al 				(list of all files + hidden files)
-touch .gitignore		(create .gitignore file)
-rm -rf .git 			(remove forcefully .git file) 
-git clone ../directory.git . 	(clone repo from one step back )
+	ls				(list of files)
+	ls -al 				(list of all files + hidden files)
+	touch .gitignore		(create .gitignore file)
+	rm -rf .git 			(remove forcefully .git file) 
+	git clone ../directory.git . 	(clone repo from one step back )
 
 ##########################################################################################################
 
-git remote -v	=====================> (show the link of remote repoistory if it is connected)
-git branch -a 	=====================> (show all branches of local and remote both)
-git diff      =======================> (show the difference of modifications)
-git pull origin master ==============> (clone the same repo as you are current working on and different users are involved)
-git push origin master ==============> (push the changes to the remote repo)
-git branch new_branch  ==============> (make new brach named as new_branch)
-git checkout new_branch =============> (switch to new_branch)
-git push origi -u new_branch ========> (make same branch remotely also apply commit on that brach)
-git merge new_branch ================> (merge new_brach to master brach)
-git branch --merged =================> (show which brach has merged with master)
-git push origin master ==============> (after merging push same as remotely)
-git branch -d new_branch ============> (delete branch locally)
-git push origin --delete new_branch==> (delete branch remotely)
+git remote -v	=================================> (show the link of remote repoistory if it is connected)
+git branch -a 	=================================> (show all branches of local and remote both)
+git diff      ===================================> (show the difference of modifications)
+git pull origin master ==========================> (clone the same repo as you are current working on and different users are involved)
+git push origin master ==========================> (push the changes to the remote repo)
+git branch new_branch  ==========================> (make new brach named as new_branch)
+git checkout new_branch =========================> (switch to new_branch)
+git push origin -u new_branch ===================> (make same branch remotely also apply commit on that brach)
+git merge new_branch ============================> (merge new_brach to master brach)
+git branch --merged =============================> (show which brach has merged with master)
+git push origin master ==========================> (after merging push same as remotely)
+git branch -d new_branch ========================> (delete branch locally)
+git push origin --delete new_branch==============> (delete branch remotely)
 
 git checkout modified.text  =====================> (delete the modification in modified file)
 git commit --amend -m "this is new message" =====> (change the last commit message)
@@ -46,9 +49,31 @@ git cherry-pick < commit # >  ===================> (copy the commit )
 git reset --hard < commit # >  ==================> (reset commits and remove all chages after that)
 git reset --mixed < commit # >  =================> (reset commits and dont remove changes, it is preset in working area)
 git reset --soft < commit # >  ==================> (reset commits and don remove change, it is preset in staging area)
-git reset file.txt OR <commit #> ================> (reset file or commit by default it is mixed reset)
+git clean -df  ==================================> (clean directory and files after reset)
+git reset <commit #> ============================> (default it is mixed reset)
 git reflog  =====================================> (show all log history)
 git revert < commit #> ==========================> (revet that commit as it is not occur but dont delete commits)
 
+git stash save "message" ========================> (saved your work)
+git stash list  =================================> (list of your saved work)
+git stash apply stash@{#} =======================> (apply saved work of given stash on working area and do not delete stash list)
+git stash drop stash@{#} ========================> (drop saved work of given stash)
+git stash pop ===================================> (apply top saved work and also delete stash list)
+git stash clear =================================> (clear all stashes)
 
+#################################################################################################################################################
+		download diffmerge from sourcegear.com and then run these commands in cmd at c:\users\user_name
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+git config --global diff.tool diffmerge
+git config --global difftool.diffmerge.cmd "C:/Program\ Files/SourceGear/Common/DiffMerge/sgdm.exe  \"$LOCAL\" \"$REMOTE\""
+
+git config --global merge.tool diffmerge
+git config --global mergetool.diffmerge.trustExitCode true
+git config --global mergetool.diffmerge.cmd  "C:/Program\ Files/SourceGear/Common/DiffMerge/sgdm.exe  -merge  -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\""
+
+#################################################################################################################################################
+
+git difftool   =================================> (show indepth difference)
+git mergetool ==================================> (you can resolve merge conflicts)
 
